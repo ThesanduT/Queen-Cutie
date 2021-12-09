@@ -79,7 +79,7 @@ Created by `THESANDU THEWSARA`
 [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@Ttmodz/Queen-Cutie)
   
 ### The Hard Method
-js
+```js
 GET QR
 $ apt install git
 $ apt install nodejs --fix-missing
@@ -88,15 +88,15 @@ $ cd Queen-Cutie
 $ npm install @adiwajshing/baileys
 $ npm install chalk
 $ node cutie.js
-
+```
       
-js
+```js
 SETUP
 $ git clone https://github.com/ThesanduT/Queen-Cutie
 $ cd Queen-Cutie
 $ npm i
 $ node cutie.js
-
+```
 
 ----
 
