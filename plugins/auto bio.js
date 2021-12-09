@@ -1,8 +1,8 @@
-/* Copyright (C)  2020  Raashii.
+/* Copyright (C)  2020  ThesanduT
 
  */
 
-const Raashii = require('../events');
+const Cutie = require('../events');
 
 const config = require('../config');
 
@@ -26,23 +26,23 @@ if (config.LANG == 'EN') {
 
   rashi_desc = 'change Auto bio mode'
 
-  OFF = '𝐀𝐮𝐭𝐨 𝐛𝐢𝐨 𝐟𝐞𝐚𝐭𝐮𝐫𝐞 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐬𝐡𝐮𝐭𝐝𝐨𝐰𝐧𝐞𝐝 \n          𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 𝐟𝐞𝐰 𝐦𝐢𝐧𝐮𝐭𝐞 🧚‍♀️'
+  OFF = '𝐀𝐮𝐭𝐨 𝐛𝐢𝐨 𝐟𝐞𝐚𝐭𝐮𝐫𝐞 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐬𝐡𝐮𝐭𝐝𝐨𝐰𝐧𝐞𝐝 \n          𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 𝐟𝐞𝐰 𝐦𝐢𝐧𝐮𝐭𝐞'
 
-  ON = '𝐀𝐮𝐭𝐨 𝐛𝐢𝐨 𝐟𝐞𝐚𝐭𝐮𝐫𝐞 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐨𝐩𝐞𝐧𝐞𝐝 \n          𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 𝐟𝐞𝐰 𝐦𝐢𝐧𝐮𝐭𝐞 🧚‍♀️'
+  ON = '𝐀𝐮𝐭𝐨 𝐛𝐢𝐨 𝐟𝐞𝐚𝐭𝐮𝐫𝐞 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐨𝐩𝐞𝐧𝐞𝐝 \n          𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭 𝐟𝐞𝐰 𝐦𝐢𝐧𝐮𝐭𝐞'
 
 }
 
 if (config.LANG == 'ML') {
 
-  rashi_desc = 'Auto bio mode മാറ്റാൻ'
+  rashi_desc = 'Auto bio mode off'
 
-  OFF = '*AUTO BIO OFF ആക്കി💌*'
+  OFF = '*AUTO BIO OFF*'
 
-  ON = '*AUTO BIO ON ആക്കി💌*'
+  ON = '*AUTO BIO ON*'
 
 }
 
-Raashii.addCommand({ pattern: 'autobio ?(.*)', fromMe: true, desc: rashi_desc, usage: '.autobio on / off' }, (async (message, match) => {
+Cutie.addCommand({ pattern: 'autobio ?(.*)', fromMe: true, desc: rashi_desc, usage: '.autobio on / off' }, (async (message, match) => {
 
   if (match[1] == 'off') {
 
