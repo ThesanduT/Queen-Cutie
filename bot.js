@@ -396,8 +396,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '*~___~ QC ERROR ~___~*' +
-                                    '\n\n*⚠ ' + error + '*\n\n```Report errors\njoin ⚠️Warning bot not allowed in the group\nchat.whatsapp.com/FVOdpPLaMvP24rIfTzCGof``` ' 
+                                await conn.sendMessage(conn.user.jid, '*~______~ QC ERROR ~______~*' +
+                                    '\n\n*⚠ ' + error + '*\n\n```Report errors:\nhttps://chat.whatsapp.com/IiJaP6ZWQkrAD3zqw5IIG7``` ' 
                                     , MessageType.text);
                             }
                         }
