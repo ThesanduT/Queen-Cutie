@@ -1,8 +1,7 @@
-/* Copyright (C) 2021 farhan-dqz
-coded for juliemwol
+/* Copyright (C) 2021 Thesandu Thewsara
 */
 
-const Julie = require('../events');
+const Cutie = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -34,7 +33,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         STICKER_off = 'STICKER option turned off'
         
     }
-    Julie.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
+    Cutie.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -52,7 +51,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         }
     }));
 
-    Julie.addCommand({pattern: 'autosticker ?(.*)', fromMe: true, desc: Y_dsc, usage: '.sticker on / off' }, (async (message, match) => {
+    Cutie.addCommand({pattern: 'autosticker ?(.*)', fromMe: true, desc: Y_dsc, usage: '.sticker on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -70,7 +69,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         }
     }));
 
-    Julie.addCommand({ pattern: 'sudo ?(.*)', fromMe: true, desc: 'changes sudo numbers', usage: '.sudo *your number*' }, (async (message, match) => {
+    Cutie.addCommand({ pattern: 'sudo ?(.*)', fromMe: true, desc: 'changes sudo numbers', usage: '.sudo *your number*' }, (async (message, match) => {
         if (match[1] == '') return await message.sendMessage('NEED A NUMBER')
         await heroku.patch(baseURI + '/config-vars', {
             body: {
@@ -80,7 +79,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         await message.sendMessage("NEW SUDO UPDATED")
     }));
 
-    Julie.addCommand({ pattern: 'caption ?(.*)', fromMe: true, desc: 'changes all captions', usage: '.caption *Made by JulieMwol*' }, (async (message, match) => {
+    Cutie.addCommand({ pattern: 'caption ?(.*)', fromMe: true, desc: 'changes all captions', usage: '.caption *Made by CutieMwol*' }, (async (message, match) => {
         if (match[1] == '') return await message.sendMessage('NEED cA CAPTION')
         await heroku.patch(baseURI + '/config-vars', {
             body: {
@@ -90,7 +89,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         await message.sendMessage("NEW CAPTION UPDATED")
     }));
 
-    Julie.addCommand({ pattern: 'handlers ?(.*)', fromMe: true, desc: 'changes handlers', usage: '.handler ^[.!] ' }, (async (message, match) => {
+    Cutie.addCommand({ pattern: 'handlers ?(.*)', fromMe: true, desc: 'changes handlers', usage: '.handler ^[.!] ' }, (async (message, match) => {
         if (match[1] == '') return await message.sendMessage('NEED A CAPTION')
         await heroku.patch(baseURI + '/config-vars', {
             body: {
@@ -101,7 +100,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }));
 
 
-    Julie.addCommand({ pattern: 'botname ?(.*)', fromMe: true, desc: 'change your bot name', usage: '.botname *name* ' }, (async (message, match) => {
+    Cutie.addCommand({ pattern: 'botname ?(.*)', fromMe: true, desc: 'change your bot name', usage: '.botname *name* ' }, (async (message, match) => {
         if (match[1] == '') return await message.sendMessage('TYPE YOUR NEW BOT NAME')
         await heroku.patch(baseURI + '/config-vars', {
             body: {
@@ -111,12 +110,12 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         await message.sendMessage("NEW BOT NAME UPDATED")
     }));
 
-Julie.addCommand({ pattern: 'theri  ?(.*)', fromMe: true, desc: 'change your theri commands', usage: '.theri command,command' }, (async (message, match) => {
-        if (match[1] == '') return await message.sendMessage('TYPE YOUR NEW BOT NAME')
+Cutie.addCommand({ pattern: 'badword  ?(.*)', fromMe: true, desc: 'change your badword commands', usage: '.badword command,command' }, (async (message, match) => {
+        if (match[1] == '') return await message.sendMessage('TYPE YOUR BADWORD COMMANDS')
         await heroku.patch(baseURI + '/config-vars', {
             body: {
-                ['THERI_LIST']: match[1]
+                ['BADKICK_LIST']: match[1]
             }
         });
-        await message.sendMessage("THERI LIST UPDATED")
+        await message.sendMessage("BADWORD LIST UPDATED")
     }));
