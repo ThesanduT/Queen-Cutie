@@ -2,9 +2,9 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "English",
     "LANGCODE": "en",
-    "AUTHOR": "AsenaDev",
+    "AUTHOR": "ThesanduT",
     "STRINGS": {
-        "_asena": {
+        "_cutie": {
             "EXAMPLE": "Eg:- ",
             "NOT_FOUND": "*I couldnt find a command like this*",
             "PLKADMIN": ".report you are not admin \n\n 🇩​🇴​🇳​🇹​ 🇹​🇷​🇾​ 🇦​🇬​🇦​🇮​🇳​, 🇮​🇫​ 🇾​🇴​🇺​ 🇹​🇷​🇾​ 🇾​🇴​🇺​ 🇼​🇮​🇱​🇱​ 🇧​🇪​ 🇷​🇪​🇲​🇴​🇻​🇪​🇩​ 🇧​🇾​ 🇦​🇩​🇲​🇮​🇳​🇸​",
@@ -79,10 +79,10 @@
             "MUST_TEXT": "```Please reply to any message```"
         },
         "heroku": {
-            "RESTART_DESC": "Restart WhatsAsena",
+            "RESTART_DESC": "Restart QueenCutie",
             "RESTART_MSG": "```Restarting...```",
-            "SHUTDOWN_DESC": "Shutdown WhatsAsena",
-            "SHUTDOWN_MSG": "```Appo Seri Tata📴```",
+            "SHUTDOWN_DESC": "Shutdown QueenCutie",
+            "SHUTDOWN_MSG": "```Shutting Down⛔```",
             "DYNO_DESC": "Check heroku dyno usage",
             "DYNO_TOTAL": "```Total Quota```",
             "DYNO_USED": "```Quota used```",
@@ -201,7 +201,7 @@
             "RATING": "RATING",
             "UPLOADING_SONG": "✮⃝🕊️✿𝖀𝖕𝖑𝖔𝖆𝖉𝖎𝖓𝖌 𝖄𝖔𝖚𝖗 𝕾𝖔𝖓𝖌✿✮⃝🕊️",
             "VIDEO_DESC": "Downloads video from YouTube.",
-            "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/xxxxxxxxxxxc```",
             "DOWNLOADING_VIDEO": "```Downloading```",
             "UPLOADING_VIDEO": "```Uploading```",
             "LOADING": "```Downloading video```",
@@ -217,7 +217,7 @@
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
             "NEED_REPLY": "*Reply to a photo or video!*",
-            "DOWNLOADING": "```Wait 👁️‍🗨️ cheyy ippo taram✔️```"
+            "DOWNLOADING": "```Wait.. Uploading your sticker✔️```"
         },
         "system_stats": {
             "ALIVE_DESC": "Does bot work?",
@@ -238,15 +238,15 @@
             "REPLY": "*Please Respond to User's Message to Report!*"
         },
         "updater": {
-            "UPDATER_DESC": "Checks the update.",
-            "UPDATE": "*Your bot is completely up-to-date!*",
-            "NEW_UPDATE": "*New update available for Bot!*\n\nChanges:\n```",
+            "UPDATER_DESC": "Checks latest updates.",
+            "UPDATE": "*QueenCutie is completely up-to-date!*",
+            "NEW_UPDATE": "*Queen Cutie new update available !*\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "```Povalle Update cheyyatte...👻```",
+            "UPDATING": "``` Updating Started! Pleas wait a few min.```",
             "INVALID_HEROKU": "*❌ Your Heroku app name or api key wrong!*",
-            "UPDATED": "*Update Kazinju🧚‍♀️✅*",
-            "UPDATED_LOCAL": "*✅ Updated!*",
-            "AFTER_UPDATE": "*👰 Liza mwol Restarting*",
+            "UPDATED": "*QueenCutie Updated Successfully✅*",
+            "UPDATED_LOCAL": "*✅ Update Successful*",
+            "AFTER_UPDATE": "*🤗Restarting to applying new changes*",
             "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
         },
         "whois": {
@@ -466,7 +466,7 @@
             "SAVE_USAGE": "Reply a message and type .save or just use .save <Your note> without replying",
             "REPLY": "Please provide a note or reply to a message.",
             "SUCCESSFULLY_ADDED": "Successfully added new note, check your notes with .notes.",
-            "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
+            "UNSUCCESSFUL": "Could not add note, please try again later or contact QueenCutie developers.",
             "DELETE_USAGE": "Deletes *all* your saved notes.",
             "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
         },
