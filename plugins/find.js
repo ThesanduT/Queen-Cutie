@@ -1,4 +1,4 @@
-const Asena = require('../events');
+const Cutie = require('../events');
 
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 
@@ -12,9 +12,9 @@ const ffmpeg = require('fluent-ffmpeg');
 
 const FIND_DESC = "Finds the Song"
 
-Asena.addCommand({pattern: 'find', fromMe: false, desc: FIND_DESC }, (async (message, match) => {
+Cutie.addCommand({pattern: 'find', fromMe: false, desc: FIND_DESC }, (async (message, match) => {
 
-    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*audio reply aayitt koduk!', MessageType.text);
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*finding audio!*', MessageType.text);
 
     var filePath = await message.client.downloadAndSaveMediaMessage({
 
@@ -60,7 +60,7 @@ Asena.addCommand({pattern: 'find', fromMe: false, desc: FIND_DESC }, (async (mes
 
             } else {
 
-                await message.client.sendMessage(message.jid, 'No results found', MessageType.text);
+                await message.client.sendMessage(message.jid, '😖No results found', MessageType.text);
 
             }
 

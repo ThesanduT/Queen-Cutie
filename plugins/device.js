@@ -1,10 +1,7 @@
-/* Copyright ©  @Farhan_dqz.
-Licensed under the  GPL-3.0 License;
-you can copy file. but credit must be there!!!
-JulieMwol - Farhan-dqz
+/* Copyright ©  @ThesanduT
 */
 
-const Asena = require('../events');
+const Cutie = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require ('axios')
 const LOAD_ING = "*Searching details*"
@@ -14,7 +11,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
 if (Config.WORKTYPE == 'private') {
-Asena.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
+Cutie.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
     
 const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
 const { status, result } = data
@@ -39,7 +36,7 @@ msg += '```'
 });
 }
 else if (Config.WORKTYPE == 'public') {
-    Asena.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
+    Cutie.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
     
         const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
         const { status, result } = data
