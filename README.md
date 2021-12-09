@@ -104,7 +104,7 @@ $ node cutie.js
 Click WA logo to Join Support Group 👇
     <br>
 <br>
-  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com)
+  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/IiJaP6ZWQkrAD3zqw5IIG7)
   <div align="center">
        
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ThesanduT&repo=Queen-Cutie&theme=nightowl)](https://github.com/ThesanduT/Queen-Cutie)
@@ -125,7 +125,7 @@ and at the end WhatsApp Team deleted your account. DON'T BLAME US.
 If you need help
 you can contact 👇🏻👇🏻 
 
-**[![Thesandu](https://www.linkpicture.com/q/WHTSPP-LOGO.png)](http://wa.me/94712564306?text=Can%20you%20help%20bro)**
+**[![Thesandu](https://www.linkpicture.com/q/WHTSPP-LOGO.png)](http://wa.me/94712564306?text=Can%20you%20help%20me)**
     
 ## Developers
   <div align="center">
