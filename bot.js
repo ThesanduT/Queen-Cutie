@@ -1,7 +1,7 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2020 Thesandu Thewsara.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+QueenCutie - Thesandu Thewsara
 */
 
 const fs = require("fs");
@@ -10,14 +10,14 @@ const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./julie/');
+const {Message, StringSession, Image, Video} = require('./cutie/');
 const { DataTypes } = require('sequelize');
 const { getMessage } = require("./plugins/sql/greetings");
 const axios = require('axios');
 const got = require('got');
 
 // Sql
-const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
+const QueenCutieDB = config.DATABASE.define('QueenCutie', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
@@ -36,7 +36,7 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
 
 const plugindb = require('./plugins/sql/plugin');
 
-// Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
+// Queen cutie base script running, bug fixes //
 String.prototype.format = function () {
     var i = 0, args = arguments;
     return this.replace(/{}/g, function () {
@@ -58,9 +58,9 @@ Array.prototype.remove = function() {
     return this;
 };
 
-async function whatsAsena () {
+async function QueenCutie () {
     await config.DATABASE.sync();
-    var StrSes_Db = await WhatsAsenaDB.findAll({
+    var StrSes_Db = await QueenCutieDB.findAll({
         where: {
           info: 'StringSession'
         }
@@ -88,14 +88,14 @@ async function whatsAsena () {
 
         const authInfo = conn.base64EncodedAuthInfo();
         if (StrSes_Db.length < 1) {
-            await WhatsAsenaDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
+            await QueenCutieDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
         } else {
             await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
         }
     })    
 
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
+        console.log(`${chalk.green.bold('Queen')}${chalk.blue.bold('Cutie')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
     });
@@ -133,7 +133,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.green.bold('✅ Liza Mwol working!')
+            chalk.green.bold('💖QueenCutie is working Successfully!')
         );
         await new Promise(r => setTimeout(r, 1100));
 
@@ -249,7 +249,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         }
 
         if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-        var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+        var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var plk_here = new Date().toLocaleDateString(get_localized_date)
 	    var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
@@ -274,7 +274,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
           }  //thanks to farhan      
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
-        var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+        var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var plk_here = new Date().toLocaleDateString(get_localized_date)
 	    var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
@@ -304,19 +304,19 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         var abc = config.BLOCKCHAT.split(',');                            
         if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
     }
-    if (config.SUPPORT == '905524317852-1612300121') {     
+    if (config.SUPPORT == '94712564306-1612300121') {     
         var sup = config.SUPPORT.split(',');                            
         if(msg.key.remoteJid.includes('-') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
     }
-    if (config.SUPPORT2 == '917012074386-1631435717') {     
+    if (config.SUPPORT2 == '94712564306-1631435717') {     
         var tsup = config.SUPPORT2.split(',');                            
         if(msg.key.remoteJid.includes('-') ? tsup.includes(msg.key.remoteJid.split('@')[0]) : tsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
     }
-    if (config.SUPPORT3 == '905511384572-1621015274') {     
+    if (config.SUPPORT3 == '94712564306-1621015274') {     
         var nsup = config.SUPPORT3.split(',');                            
         if(msg.key.remoteJid.includes('-') ? nsup.includes(msg.key.remoteJid.split('@')[0]) : nsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
     }
-    if (config.SUPPORT4 == '905511384572-1625319286') {     
+    if (config.SUPPORT4 == '94712564306-1625319286') {     
         var nsup = config.SUPPORT4.split(',');                            
         if(msg.key.remoteJid.includes('-') ? nsup.includes(msg.key.remoteJid.split('@')[0]) : nsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
     }
@@ -388,16 +388,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
-                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
+                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [QueenCutie] --' + 
+                                    '\n*QueenCutie bir hata gerçekleşti!*'+
                                     '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
                                     '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._\n\n' +
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '*~_________~ 𝐋𝐈𝐙𝐀 𝐌𝐖𝐎𝐋࿐ ~______~*' +
-                                    '\n\n*👾 ' + error + '*\n\n```Report errors\njoin ⚠️Warning bot not allowed in the group\nchat.whatsapp.com/FVOdpPLaMvP24rIfTzCGof``` ' 
+                                await conn.sendMessage(conn.user.jid, '*~___~ QC ERROR ~___~*' +
+                                    '\n\n*⚠ ' + error + '*\n\n```Report errors\njoin ⚠️Warning bot not allowed in the group\nchat.whatsapp.com/FVOdpPLaMvP24rIfTzCGof``` ' 
                                     , MessageType.text);
                             }
                         }
@@ -411,7 +411,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            console.log(chalk.red.bold('Loading old version strings...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
@@ -422,4 +422,4 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
     }
 }
 
-whatsAsena();
+QueenCutie();
