@@ -59,9 +59,7 @@
         "PM_BLOCK": {
 
             "description": "Inbox Blocking System.",
-
             "required": true,
-
             "value": "false"
 
         },
@@ -170,7 +168,7 @@
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message! Use => default, to change back.",
             "required": false,
-            "value": "\n ```Queen Cutie is Alive !!!```\n\n```Type``` *.help* ```for commands {pp}```"
+            "value": "\n ```Queen Cutie is Alive !!!```"
         },
         "ALIVEBUTTON": {
             "description": "Set the alive message two name",
